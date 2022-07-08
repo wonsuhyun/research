@@ -1,0 +1,292 @@
+@import url("reset.css");
+
+.wrapper { 
+	width : 100%; 
+	min-height: 100vh;
+	overflow-x: hidden;
+	background-color: #fff;
+}
+
+.contents {
+	max-width: 1080px;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+.scroll_none {
+	overflow: hidden;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+@font-face {
+	font-family: noto;
+	font-style: normal;
+	font-weight: 200;
+	src: url('font/NotoSansKR-Light-Hestia.eot');
+	src: url('font/NotoSansKR-Light-Hestia.eot?#iefix') format('embedded-opentype'), 
+		 url('font/NotoSansKR-Light-Hestia.woff') format('woff'), 
+		 url('font/NotoSansCJKkr-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: noto;
+	font-style: normal;
+	font-weight: 400;
+	src: url('font/NotoSansKR-Regular-Hestia.eot');
+	src: url('font/NotoSansKR-Regular-Hestia.eot?#iefix') format('embedded-opentype'), 
+		 url('font/NotoSansKR-Regular-Hestia.woff') format('woff'), 
+		 url('font/NotoSansCJKkr-Regular.ttf') format('truetype');
+}
+/* semi-Bold */
+@font-face {
+	font-family: noto;
+	font-style: normal;
+	font-weight: 600;
+	src: url('font/NotoSansKR-Medium-Hestia.eot');
+	src: url('font/NotoSansKR-Medium-Hestia.eot?#iefix') format('embedded-opentype'), 
+		 url('font/NotoSansKR-Medium-Hestia.woff') format('woff'), 
+		 url('font/NotoSansCJKkr-Medium.ttf') format('truetype');
+}
+/* Bold */
+@font-face {
+	font-family: noto;
+	font-style: normal;
+	font-weight: 900;
+	src: url('font/NotoSansKR-Bold-Hestia.eot');
+	src: url('font/NotoSansKR-Bold-Hestia.eot?#iefix') format('embedded-opentype'), 
+		 url('font/NotoSansKR-Bold-Hestia.woff') format('woff'), 
+		 url('font/NotoSansCJKkr-Bold.ttf') format('truetype');
+}					
+
+/*========================================================================================================================
+	guaid
+==========================================================================================================================
+*/
+.mgb5 {
+	margin-bottom:5px !important
+}
+.mgb10{
+	margin-bottom:10px !important
+}
+.mgb20{
+	margin-bottom:20px !important
+}
+.mgb30{
+	margin-bottom:30px !important
+}
+.mgb40{
+	margin-bottom:40px !important
+}
+.mgb50{
+	margin-bottom:50px !important
+}
+.mgb60{
+	margin-bottom:60px !important
+}
+.mgb70{
+	margin-bottom:70px !important
+}
+.mgb80{
+	margin-bottom:80px !important
+}
+.mgb90{
+	margin-bottom:90px !important
+}
+
+.mgt5{
+	margin-top:5px !important
+}
+.mgt10{
+	margin-top:10px !important
+}
+.mgt20{
+	margin-top:20px !important
+}
+.mgt30{
+	margin-top:30px !important
+}
+.mgt40{
+	margin-top:40px !important
+}
+.mgt50{
+	margin-top:50px !important
+}
+.mgt60{
+	margin-top:60px !important
+}
+.mgt70{
+	margin-top:70px !important
+}
+.mgt80{
+	margin-top:80px
+}
+.mgt90{
+	margin-top:90px
+}
+.mgt100{
+	margin-top:100px
+}
+
+/*margin-left*/
+.mgl10{
+	margin-left:10px
+}
+.mgl20{
+	margin-left:20px
+}
+.mgl40{
+	margin-left:40px
+}
+.mgl50{
+	margin-left:50px
+}
+.mgl60{
+	margin-left:60px
+}
+.mgl70{
+	margin-left:70px
+}
+.mgl80{
+	margin-left:80px
+}
+.mgl90{
+	margin-left:90px
+}
+/*
+=======================================================================
+common
+=======================================================================
+*/
+
+input[placeholder]{
+	font-size:14px
+}
+textarea[readonly]{
+	background-color: #f7f7f7;
+}
+input[readonly]{
+	background-color: #f7f7f7;
+}
+input[disabled]{
+	background-color: #f7f7f7;
+}
+button {
+	text-align: center;
+}
+
+input[type=checkbox] {
+	width: 0;
+	height: 0;
+	appearance: none;
+	position: absolute;
+	text-indent: -99999px;
+	border: none;
+}
+input[type=checkbox] + label {
+	padding-left: 30px;
+	position: relative;
+	display: inline-block
+}
+input[type=checkbox] + label::after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border: 1px solid #cdcdcd;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+input[type=checkbox]:checked + label::after{
+
+}
+
+input:checked + .slider {
+	background-color: #c9242b;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #c9242b;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(14px);
+	-ms-transform: translateX(14px);
+	transform: translateX(14px);
+}
+
+.red {
+	color: #d8191f;
+}
+
+.hide {
+	display: none;
+}
+
+.swiper {
+	overflow: hidden;
+}
+.swiper_wrap{
+	overflow-x: hidden;
+}
+
+.tb {
+    display: table;
+}
+
+.tb > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tb.half > div {
+    width: 50%;
+}
+.paper_list {
+	width: 700px;
+	margin: 0 auto;
+}
+.paper_list .question {
+	font-weight: 600;
+	font-size: 20px;
+	padding-left: 10px;
+}
+.paper_list li .answer {
+	overflow: hidden;
+}
+.paper_list li {
+	padding-top: 50px;
+}
+.paper_list li .answer > div {
+	padding: 4px 10px ;
+	width: 50%;
+	float: left;
+}
+.paper_list li div label input {
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+	appearance: none;
+	display: none;
+}
+.paper_list li div label span {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+	border: 2px solid #f1f1f1;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.paper_list li div label input:checked + span {
+	background: #f4f7fb;
+	border-color: #5c8cca;
+	color: #5c8cca;
+}
+
+@media (max-width: 1080px) {
+	.contents{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

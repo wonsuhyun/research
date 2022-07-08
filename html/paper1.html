@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../resources/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../resources/swiper/dist/css/swiper.min.css">
+    <script type="text/javascript" src="../../resources/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/jquery-ui.1.12.1.js"></script>
+    <script type="text/javascript" src="../../resources/js/common.js"></script>
+    <script type="text/javascript" src="../../resources/swiper/dist/js/swiper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+</head>
+<body>
+<div class="wrapper paper">
+    <div>
+        <ul class="paper_list">
+            @@for (var i = 0; i <= 20; i++) {
+                <li>
+                    <p class="question">
+                        `+ [
+                        '가족과 여행',
+                        '친구와 여행',
+                        '동호인과 여행',
+                        '혼자여행',
+                        '수학여행',
+                        'MT',
+                        '워크샵',
+                        '수련회',
+                        '야유회',
+                        '세미나',
+                        '등산',
+                        '낚시',
+                        '레저',
+                        '체험학습',
+                        '기타'
+                        ][i] +`
+                    </p>
+                    <div class="answer">
+                        <div>
+                            <label>
+                                <input type="radio" name="paper`+i+`"/>
+                                <span>A. 매우 그렇다</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="paper`+i+`"/>
+                                <span>B. 대게 그렇다</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="paper`+i+`"/>
+                                <span>C. 조금 그렇다</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <input type="radio" name="paper`+i+`"/>
+                                <span>D. 그렇지않다</span>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+
+        <div>
+            <a href="">이전</a>
+            <a href="">다음</a>
+        </div>
+    </div>
+   
+</div>
+
+</body>
+</html>

@@ -241,26 +241,64 @@ input:checked + .slider:before {
 .tb.half > div {
     width: 50%;
 }
+.paper {
+	position: relative;
+}
+.paper::after {
+	content: "";
+	height: 100%;
+	width: 12px;
+	background-color: #34c47e;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 .paper_list {
-	max-width: 700px;
+	max-width: 430px;
 	margin: 0 auto;
 	width: 100%;
 }
+header {
+	position: relative;
+	height: 80px;
+	border-bottom: 3px solid #b2b2b2;
+}
+header .prev{
+	display: inline-block;
+	width: 18px;
+	height: 25px;
+	left: 15px;
+	top: 25px;
+	position: absolute;
+	background: url(../img/arr.png) no-repeat center / contain;
+}
+header .logo {
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	right: 25px;
+	top: 25px;
+	position: absolute;
+	background: url(../img/logo.png) no-repeat center / contain;
+}
+.banner {
+	
+	background-color: #99e1be;
+	height: 60vw;
+	max-height: 400px;
+}
 .paper_list .question {
+	text-align: center;
 	font-weight: 600;
-	font-size: 20px;
-	padding-left: 45px;
-	margin-bottom: 10px;
+	font-size: 15px;
+	margin-bottom: 40px;
 	position: relative;
 	word-break: keep-all;
 }
 .paper_list .question span {
-	color: #5c8cca;
+	font-size: 14px;
 	display: inline-block;
-    margin-right: 5px;
-	position: absolute;
-	left: 10px;
-	top: 0;
+	font-weight: 200;
 }
 .paper_list li .answer {
 	overflow: hidden;
@@ -270,8 +308,7 @@ input:checked + .slider:before {
 }
 .paper_list li .answer > div {
 	padding: 4px 10px ;
-	width: 50%;
-	float: left;
+	width: 100%;
 }
 .paper_list li div label input {
 	width: 0;
@@ -283,17 +320,15 @@ input:checked + .slider:before {
 .paper_list li div label span {
 	display: inline-block;
 	width: 100%;
-	text-align: center;
-	padding: 5px 0;
-	border: 2px solid #f1f1f1;
-	border-radius: 10px;
-	background: #fff;
+	text-align: left;
+	margin: 5px 0;
+	font-size: 14px;
+	padding-left:30px;
+	background: url(../img/radio.png) no-repeat left center / 21px;
 }
 
 .paper_list li div label input:checked + span {
-	background: #f4f7fb;
-	border-color: #5c8cca;
-	color: #5c8cca;
+	background: url(../img/radio_on.png) no-repeat left center / 21px;
 }
 .btns {
 	text-align: center;
@@ -307,11 +342,16 @@ input:checked + .slider:before {
 	display: inline-block;
 	width: 100px;
 	height: 40px;
-	background-color: #5c8cca;
+	background-color: #34c47e;
 	color: #fff;
 	line-height: 38px;
 	border-radius: 5px;
 }
+.result {
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+
 .result .contents {
 	max-width: 1000px;
 	width: 100%;
@@ -375,6 +415,11 @@ input:checked + .slider:before {
 }
 .result .info2 span {
 	font-size: 25px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.result .info2 p {
+	margin-bottom: 5px;
 }
 .result .top .img {
 	width: 35%;
@@ -386,10 +431,30 @@ input:checked + .slider:before {
 .result .part{
 	margin-top: 20px;
 	word-break: keep-all;
+	padding-top: 30px;
+}
+
+.result .part .tit{
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 15px;
 }
 @media (max-width : 1000px ){
-	.result .part {
-		padding: 0 20px
+	.top {
+		display: block;
+	}
+	.top > div {
+		width: 100%;
+		display: block;
+	}
+	.result .top .img {
+		width: 100%;
+		display: block;
+		padding: 40px 20px;
+	}
+	.result .top .conts {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 @media (max-width: 750px) {
@@ -399,12 +464,11 @@ input:checked + .slider:before {
 	}
 	.paper_list li .answer > div {
 		padding: 0 20px;
-		width: 100%;
 		margin-bottom: 5px;
 	}
 	.paper_list .question {
-		font-size: 17px;
-		padding-left: 45px;
+		font-size: 15px;
+		padding:0  20px;
 	}
 	.paper_list .question span {
 		left: 20px;
